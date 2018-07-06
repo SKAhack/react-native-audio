@@ -37,6 +37,10 @@ NSString *const AudioRecorderEventFinished = @"recordingFinished";
 
 @synthesize bridge = _bridge;
 
++ (BOOL)requiresMainQueueSetup {
+  return YES;
+}
+
 RCT_EXPORT_MODULE();
 
 - (void)sendProgressUpdate {
