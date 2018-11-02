@@ -490,6 +490,8 @@ RCT_EXPORT_METHOD(generateWaveform:(NSString *)path resolver:(RCTPromiseResolveB
           }
           vol = (vol + right) / 2.0;
         }
+        // 収録時の大きさと結構違うので合わせる
+        vol = vol * 0.35;
 
         [audioData addObject:[NSNumber numberWithFloat:vol]];
         totalLeft = 0;
