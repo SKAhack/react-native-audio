@@ -136,7 +136,7 @@ RCT_EXPORT_MODULE();
       track:track
       atTime:CMTimeAdd(startTime, sourceAsset.duration)
       startTime:CMTimeAdd(startTime, sourceAsset.duration)
-      endTime:sourceAsset.duration])
+      endTime:targetAsset.duration])
     {
       return nil;
     }
