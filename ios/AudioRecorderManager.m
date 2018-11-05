@@ -343,6 +343,7 @@ RCT_EXPORT_METHOD(startRecording:(double)startTime)
 {
   _recordingStartTime = startTime;
 
+  [_recordSession setCategory:AVAudioSessionCategoryRecord error:nil];
   [self prepareToRecord];
   [self startProgressTimer];
   [_recordSession setActive:YES error:nil];
